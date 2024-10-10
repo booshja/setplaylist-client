@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withPlausibleProxy } from "next-plausible";
 
-export default nextConfig;
+const nextConfig = {
+    compiler: {
+        styledComponents: true,
+    },
+    images: {
+        domains: [],
+    },
+};
+
+export default withPlausibleProxy()(nextConfig);
